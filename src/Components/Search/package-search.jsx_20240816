@@ -1,0 +1,131 @@
+import React from 'react'
+import { useState } from 'react'
+import { Autocomplete } from "@mui/material"
+import { useNavigate } from 'react-router-dom'
+import {
+  Grid,
+  TextField,
+  Button,
+  Radio,
+  FormControlLabel,
+  RadioGroup,
+  Typography
+} from "@mui/material";
+
+
+const category = [
+{ label: 'International', id:'1'}
+]
+
+const International = [
+	{ label: 'Thailand', id: '1' },
+	{ label: 'Malaysia', id: '2' }, 
+	{ label: 'Maldives', id: '3' }, 
+	{ label: 'Nepal', id: '4' }, 
+	{ label: 'Dubai', id: '5' }, 
+	{ label: 'Singapore', id: '6' }, 
+	{ label: 'Vietnam', id: '7' }, 
+	{ label: 'SriLanka', id: '8' } 
+]
+
+
+
+const SearchPkg = () => {
+
+   const [cat, setCat] = useState("")
+   const [inputCat, setInputCat] = useState("")
+   const [dest, setDest] = useState("")
+   const [inputDest, setInputDest] = useState("")
+
+   const handleCat = (newVal) => {
+    setCat(newVal);
+   }
+
+   const handleDest = (newVal) => {
+    setDest(newVal);
+   }
+  
+   const navigate = useNavigate();
+
+   const handleSubmit = (e) => {
+      // console.log(dest.label);
+       e.preventDefault();
+       if (dest.label==='Thailand'){	   
+       navigate('/Thailand')
+       }
+       if (dest.label==='Malaysia'){
+       navigate('/Malaysia')
+       }
+       if (dest.label==='Maldives'){
+       navigate('/Maldives')
+       }
+       if (dest.label==='Dubai'){
+       navigate('/Dubai')
+       }
+        if (dest.label==='Singapore'){
+       navigate('/Singapore')
+       }
+        if (dest.label==='Vietnam'){
+       navigate('/Vietnam')
+       }
+        if (dest.label==='Nepal'){
+       navigate('/Nepal')
+       }
+        if (dest.label==='SriLanka'){
+       navigate('/SriLanka')
+       }
+
+	   
+   }
+	
+   return(
+       <div className='sectionContainer grid'>
+          <div className='searchInputs flex'>
+             <div className='singleInput flex'>
+	        <div className='texts'>
+	           <Autocomplete
+                        value={cat}
+                        onChange={(event, newValue) => {
+                        handleCat(newValue);
+                        }}
+                        inputValue={inputCat}
+                        onInputChange={(event, newInputValue) => {
+                        setInputCat(newInputValue);
+                        }}
+                        getOptionLabel={(option) => (option.label?option.label:'')}
+                        options={category}
+                        style={{ width: 180 }}
+                        renderInput={(params) => <TextField {...params} label="Category" variant="outlined" />}
+                    />
+                </div>
+             </div>
+             
+	     <div className='singleInput flex'>
+	         <div className='texts'>
+                     <Autocomplete
+                        value={dest}
+                        onChange={(event, newValue) => {
+                        handleDest(newValue);
+                        }}
+                        inputValue={inputDest}
+                        onInputChange={(event, newInputValue) => {
+                        setInputDest(newInputValue);
+                        }}
+                        getOptionLabel={(option) => (option.label?option.label:'')}
+                        options={International}
+                        style={{ width: 180 }}
+                        renderInput={(params) => <TextField {...params} label="Destination" variant="outlined" />}
+                    />	           
+                 </div>
+             </div>
+             
+             <div className='searchBtn flex'>
+                <button className='btn btnBlock' onClick={handleSubmit}>Search Packages</button>
+             </div>
+
+	  </div>
+       </div>   
+   )
+}
+
+export default SearchPkg

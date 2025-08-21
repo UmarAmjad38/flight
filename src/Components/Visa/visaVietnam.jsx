@@ -1,0 +1,79 @@
+import React from 'react'
+//import { View, Text } from 'react-native'
+
+const VisaVietnam = () =>{
+   return(
+      <div className='singlepage flex container'>
+	 <div className='singleText'>
+            <h1>Required Documents for Sticker E-visa(Vietnam) </h1>
+            <span>
+                <h3>Basic Documents</h3>
+                <p>Passport scan copy with Seven (07) Months Validity</p>
+                <p>Recent Sacn copy photograph taken in last 3 months (white background only, photo size 35 mm X 45 mm)</p>
+            </span>
+
+	    
+	    <h1>Required Documents for Sticker visa / Approval (Vietnam) </h1>
+	    <span>
+                <h3>Basic Documents</h3>
+                <p> Seven (07) Months Valid Passport with the last one Old Passport if have one. (if an OLD passport is Lost then a GD copy with a translated notary must be required).</p>
+                <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 45 mm)</p>
+                <p>Personal bank statement of last 06 months and minimum balance BDT 70,000 for each applicant.</p>
+                <p>Visiting card</p>
+            </span>
+
+	    <span>
+            	<h3>Job Holder</h3>
+		<p>No objection certificate (NOC)</p>
+		<p>Marriage certificate copy (if spouse name not mentioned in the passport)</p>
+		<p>Employee Id card copy (One photo copy)</p>
+		<p>Salary bank statement (Last 06 months) and bank solvency certificate or salary certificate or pay slip</p>
+		<p>Personal bank solvency certificate</p>
+	        <p>GO (Government order) for official passport</p>
+                <p>BMDC certificate for doctor (Scan copy)</p>
+                <p>BAR council certificate for Advocate(One photo copy)</p>
+                <p>Retirement document for Retired Person (One photo copy)</p>
+	     </span>
+
+	     <span>
+	        <h3>Businessman</h3>
+		<p>Renewal trade license copy with notary public (english translated)</p>
+		<p>Marriage certificate copy (if spouse name not mentioned in the passport)</p>
+		<p>Memorandum for limited company form page XII (One photo copy)</p>
+		<p>Company letter head pad</p>
+		<p>Personal or company bank solvency certificate</p>
+	     </span>  
+	     
+	     <span>
+                <h3>Student</h3>
+		<p>ID card (Student) one photocopy both sides</p>
+		<p>Leave letter from school or collage original copy</p>
+	        <p>Birth certificate for Non-student Child & Infant</p>
+             </span>
+
+	 </div>
+
+	 <div className='singleText'>
+           <h1>E-Visa Processing Fee</h1>
+           <span>
+             <h2>BDT 6500</h2>
+             <p>Non-Refundable</p>
+             <p>Include Service Charge</p>
+	     <p>Processsing time 7 Working days</p>
+           </span>
+
+	   <h1>Sticker Visa/ Approval Processing Fee</h1>
+           <span>
+             <h2>BDT 7500</h2>
+             <p>Non-Refundable</p>
+             <p>Include Service Charge</p>
+             <p>Processsing time 15 Working days</p>
+           </span>
+
+         </div>
+  
+      </div>
+   )
+}
+
+export default VisaVietnam

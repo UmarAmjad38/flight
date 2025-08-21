@@ -1,0 +1,67 @@
+[
+	{
+	"id":"1",
+	"name":"United Arab Emirates",
+	"code":"AE"
+	},
+	{
+        "id":"2",
+        "name":"Thailand",
+        "code":"TH"
+        },
+	{
+        "id":"3",
+        "name":"Singapore",
+        "code":"SG"
+        },
+	{
+        "id":"4",
+        "name":"Malaysia",
+        "code":"MY"
+        },
+	{
+        "id":"5",
+        "name":"Saudi Arabia",
+        "code":"SA"
+        },
+	{
+        "id":"6",
+        "name":"China",
+        "code":"CN"
+        },
+	{
+        "id":"7",
+        "name":"India",
+        "code":"IN"
+        },
+	{
+        "id":"8",
+        "name":"Indonesia",
+        "code":"ID"
+        },
+	{
+        "id":"9",
+        "name":"Vietnam",
+        "code":"VN"
+        },
+        {
+        "id":"10",
+        "name":"Turkey",
+        "code":"TR"
+        },
+        {
+        "id":"11",
+        "name":"Canada",
+        "code":"CA"
+        },
+        {
+        "id":"12",
+        "name":"United Kingdom",
+        "code":"GB"
+        },
+        {
+        "id":"13",
+        "name":"United State",
+        "code":"US"
+        }
+]
