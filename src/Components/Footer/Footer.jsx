@@ -7,7 +7,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
    return (
-      <footer className='bg-gradient-to-br from-blue-100 via-blue-200 to-indigo-200 text-gray-800'>
+      <footer className='bg-[#bfbfbf] text-gray-800'>
          <div className="container mx-auto px-4 py-16">
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
 
@@ -71,7 +71,7 @@ const Footer = () => {
             <div className='mt-12 pt-8 border-t border-gray-300 lg:flex lg:items-center lg:justify-between'>
                <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Accepted Payments</h3>
-                  <img src={payment} className='h-36 w-auto rounded-lg shadow-md' alt='Accepted payment methods'/>
+                  <img src={payment} className='h-40 w-auto rounded-lg shadow-md' alt='Accepted payment methods'/>
                </div>
                <div className='mt-8 lg:mt-0 text-sm text-gray-500 text-center lg:text-right'>
                   <p>Copyright © {new Date().getFullYear()} Xpress Trip. All Rights Reserved.</p>
