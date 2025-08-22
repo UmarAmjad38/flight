@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import logoWhite from '../../assets/xpresstripz_logo_white.png';
 import logoColor from '../../assets/xpresstripz_logo_main.png';
 import { AiOutlineGlobal } from 'react-icons/ai';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const handleScroll = () => {
     if (window.scrollY >= 10) {
@@ -15,18 +18,23 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    if (isHomePage) {
+      window.addEventListener('scroll', handleScroll);
+    }
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isHomePage]);
 
-  const logo = isScrolled ? logoColor : logoWhite;
-  const textColor = isScrolled ? 'text-gray-700' : 'text-white';
-  const navBackground = isScrolled ? 'bg-white shadow-md' : 'bg-transparent';
+  const isTransparentNav = isHomePage && !isScrolled;
+
+  const logo = isTransparentNav ? logoWhite : logoColor;
+  const textColor = isTransparentNav ? 'text-white' : 'text-gray-700';
+  const navBackground = isTransparentNav ? 'bg-transparent' : 'bg-white shadow-md';
 
   return (
-    <header className={`fixed top-0 bg-black left-0 w-full z-50 transition-colors duration-300 ${navBackground}`}>
+    <header className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${navBackground}`}>
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="">
           <a href="/">

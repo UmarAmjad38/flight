@@ -13,9 +13,9 @@ const App = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-yellow-400 mb-4 drop-shadow-lg">
             Travel Without the Wait
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-medium drop-shadow-md">
+          {/* <p className="text-xl md:text-2xl text-white/90 font-medium drop-shadow-md">
             Instant bookings, hassle-free travel, unforgettable experiences
-          </p>
+          </p> */}
         </div>
         <SearchContainer />
       </Home>
